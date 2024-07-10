@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Header from "@/components/Header";
 import Image from "next/image";
 import Images from "@/components/Images";
+import MainBanner from "@/shared/mainBanner";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       </div>
     </main>
     <Images/>
+    <MainBanner/>
     <Footer/>
     </>
   );
