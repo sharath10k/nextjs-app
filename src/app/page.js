@@ -1,12 +1,13 @@
 import Footer from "@/components/Footer";
 import styles from "./page.module.css";
 import Header from "@/components/Header";
-import Image from "next/image";
 import Images from "@/components/Images";
-import MainBanner from "@/shared/mainBanner";
-
+import dynamic from "next/dynamic";
 
 export default function Home() {
+  const MainBanner = dynamic(()=> import ("../shared/mainBanner"))
+  const Footer = dynamic(()=> import ("@/components/Footer"))
+
   return (<>
   <Header/>
     <main >
