@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 
 const DynamicFooter = dynamic(()=> import ("@/components/Footer"))
 const DynamicMainBanner = dynamic(()=> import ("../shared/mainBanner"))
+const DynamicRegister = dynamic(()=> import ("@/comp/register"))
 
 export default function Home() {
 
@@ -11,7 +12,7 @@ export default function Home() {
   <Header/>
     <main >
       <div className={styles.description}>
-        <h1>hi hello world</h1>
+        <DynamicRegister/>
       </div>
     </main>
     <DynamicMainBanner/>
